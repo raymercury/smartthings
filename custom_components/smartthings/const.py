@@ -3,13 +3,11 @@ from datetime import timedelta
 import re
 
 from homeassistant.const import (
-    UnitOfElectricPotential.VOLT,
+    UnitOfElectricPotential,
     PERCENTAGE,
-    UnitOfPower.WATT,
-    UnitOfTemperature.CELSIUS,
-    UnitOfTemperature.FAHRENHEIT,
-    UnitOfTime.WEEKS,
-    UnitOfTime.MINUTES,
+    UnitOfPower,
+    UnitOfTemperature,
+    UnitOfTime,
 )
 
 DOMAIN = "smartthings"
