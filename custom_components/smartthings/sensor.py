@@ -27,6 +27,7 @@ from homeassistant.const import (
     PERCENTAGE,
     UnitOfPower,
     UnitOfVolume,
+    UnitOfTemperature,
 )
 
 from homeassistant.helpers.entity import EntityCategory
@@ -951,4 +952,4 @@ class SamsungOcfTemperatureSensor(SmartThingsEntity, SensorEntity):
             self.unit_state = self._device.status.attributes[Attribute.data].value[
                 "payload"
             ]["units"]
-        return UNIT_MAP.get(self.unit_state) if self.unit_state else None
+        return UNIT_MAP.get(self.unit_state) if self.unit_state else UnitOfTemperature.FAHRENHEIT
