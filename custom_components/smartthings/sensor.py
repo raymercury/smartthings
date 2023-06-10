@@ -643,18 +643,12 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
                     [
                         SamsungOvenWarmingCenter(device),
                         SamsungOcfTemperatureSensor(
-                            device,
-                            "Temperature",
-                            "/temperature/current/cook/0",
-                            SensorStateClass.MEASUREMENT,
-                            SensorDeviceClass.TEMPERATURE,
+                            device, "Temperature", "/temperature/current/cook/0"
                         ),
                         SamsungOcfTemperatureSensor(
                             device,
                             "Meat Probe Temperature",
                             "/temperature/current/prob/0",
-                            SensorStateClass.MEASUREMENT,
-                            SensorDeviceClass.TEMPERATURE,
                         ),
                     ]
                 )
@@ -665,15 +659,11 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
                             device,
                             "Cooler Temperature",
                             "/temperature/current/cooler/0",
-                            SensorStateClass.MEASUREMENT,
-                            SensorDeviceClass.TEMPERATURE,
                         ),
                         SamsungOcfTemperatureSensor(
                             device,
                             "Freezer Temperature",
                             "/temperature/current/freezer/0",
-                            SensorStateClass.MEASUREMENT,
-                            SensorDeviceClass.TEMPERATURE,
                         ),
                     ]
                 )
